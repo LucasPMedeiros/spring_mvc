@@ -16,14 +16,16 @@ public class HelloWorldController {
 //	Rota: /hello/hello
 	@RequestMapping("/hello")
 	public String hello() {
-		return "hello";
+		String message = "hello";
+		return message;
 	}
 
 //	Rota: /hello/processForm
 	@RequestMapping("/processForm")
 	public String processForm() {
-		System.out.println("show form");
-		return "showForm";
+		String message = "showForm";
+		return message;  
+		
 	}
 	
 	@RequestMapping("/processFormV2")
@@ -31,7 +33,8 @@ public class HelloWorldController {
 		String studentName = request.getParameter("studentName").toUpperCase();
 		System.out.println(request.getParameter("studentName"));
 		model.addAttribute("message", studentName);
-		return "showForm";
+		String message = "showForm";
+		return message;  
 	}
 	
 	@RequestMapping("/processFormV3")
@@ -42,6 +45,7 @@ public class HelloWorldController {
 		studentName = studentName.toUpperCase();
 		System.out.println(studentName);
 		model.addAttribute("message", "Hello " + studentName);
-		return "showForm";
+		String message = "showForm";
+		return message;  
 	}
 }
