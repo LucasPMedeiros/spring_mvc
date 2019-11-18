@@ -8,19 +8,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-// Adiciona um nível anterior ao path
-// Todas as rotas do controller terão o /hello/{rota}
+
+
 @RequestMapping("/hello")
 public class HelloWorldController {
 
-//	Rota: /hello/hello
+
 	@RequestMapping("/hello")
 	public String hello() {
 		String message = "hello";
 		return message;
 	}
 
-//	Rota: /hello/processForm
+
 	@RequestMapping("/processForm")
 	public String processForm() {
 		String message = "showForm";
